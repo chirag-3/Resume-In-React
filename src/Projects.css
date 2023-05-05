@@ -5,3 +5,12 @@ h2{
 #projects{
     margin-left: 5%;
 }
+
+.tech-used{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tech-used > div{
+    margin-right: 30px;
+}

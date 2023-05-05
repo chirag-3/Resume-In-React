@@ -26,7 +26,9 @@ function App() {
                    tenthTime={tTime} twelfthTime={tfTime} collegeTime={cTime}/>
         <Skills skill1={"Python"} skill2={"JavaScript"} skill3={"HTML"} skill4={"CSS"} skill5={"Excel"} skill6={"SQL"} skill7={"C++"} 
                 skill8="Problem Solving"/>
-        <Projects />
+        <Projects name1="Secure Lab Access Desktop Application" p1t1={"Python"} p1t2={"Tkinter"} p1t3={"SQLite"} p1t4={"VSCode"}
+                  name2={"Instagram Data Scraping Using Selenium"} p2t1={"Python"} p2t2={"Selenium"} p2t3={"Jupyter Notebook"}
+                  name3={"Fruit Slicing Game"} p3t1={"HTML"} p3t2={"CSS"} p3t3={"JavaScript"} />
     </div>
   );
 }
