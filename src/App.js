@@ -3,7 +3,8 @@ import Name from './heading.js';
 import Profile from './Profile.js';
 import {Education} from './Education';
 import Skills from './Skills';
-import Projects from './Projects'
+import Projects from './Projects';
+import data from "./data/data";
 
 function App() {
   let school = "Atomic Energy Central School RRCAT Indore";
@@ -16,12 +17,9 @@ function App() {
   let cTime = '2020-2024';
   return (
     <div className="App"  id='resume'>
-        <Name name="Chirag Lala" city="Indore" state="Madhya Pradesh" />
+        <Name name={data.name} city={data.city} state={data.state} />
         <br />
-        <Profile ln1="LinkedIn" l1="https://www.linkedin.com/in/chirag-lala-830463190/"
-                 ln2="Github" l2="https://github.com/chirag-3"
-                 ln3="Leetcode" l3="https://leetcode.com/chiragvs/"
-                 ln4="InterviewBit" l4="https://www.interviewbit.com/profile/chirag-lala/daily-activity"  />
+        <Profile profiles={data.profiles}  />
         <Education tenthGrade={tenG} twelfthGrade={tfG} collegeGrade={cG} tenthSchool={school} twelfthSchool={school} college={college} 
                    tenthTime={tTime} twelfthTime={tfTime} collegeTime={cTime}/>
         <Skills skill1={"Python"} skill2={"JavaScript"} skill3={"HTML"} skill4={"CSS"} skill5={"Excel"} skill6={"SQL"} skill7={"C++"} 
