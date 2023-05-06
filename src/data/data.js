@@ -24,11 +24,11 @@ const data = {
     twelfthSchool: "Atomic Enegry Central School RRCAT Indore",
     college: "Chandigarh University BE IBM CSE Big Data Analytics",
     tenthTime: "2015-2016",
-    twelfthTIme: "2016-2017",
+    twelfthTime: "2016-2017",
     collegeTime: "2020-2024",
   },
 
-  skills: ["Python","JavaScript","SQL","HTML","CSS","Excel","C++","Problem Solving"],
+  skills: ["Python","JavaScript","SQL","HTML","CSS","Excel","C++","Problem Solving","Tableau"],
 
   projects: [
     {name:"Secure Lab Access Desktop Application", technologies:['Python',"Tkinter","SQLite","VSCode"]},
