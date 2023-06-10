@@ -35,12 +35,12 @@ import './Skills.css';
 
 export default function Skills({skills}){
     return(
-    <div id="skills">
+    (skills.length===0?null:<div id="skills">
         <h2>SKILLS</h2>
         {
         skills.map(
             skill=> <li>{skill}</li>
         )
         }       
-    </div>);
+    </div>));
 }

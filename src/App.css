@@ -6,3 +6,16 @@
     border: 1px black solid;
     background-color: aquamarine;
 }
+
+#components{
+    display: flex;
+
+}
+
+#rightComponent {
+    flex-basis: 70%;
+}
+
+#leftComponent {
+    flex-basis: 30%;
+}
