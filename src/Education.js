@@ -1,26 +1,21 @@
-import './Education.css'
+import "./Education.css";
 
-export function Education({tenthSchool,tenthGrade,tenthTime,twelfthSchool,twelfthGrade,twelfthTime,college,collegeGrade,collegeTime})
-{
-    return(
-    <div id="education"> 
-        <h2>EDUCATION</h2>
-
-        <p> 
-            {college} <br /> 
-            {collegeGrade} <br />
-            {collegeTime}
-        </p> 
-        <p> 
-            {tenthSchool} <br /> 
-            {tenthGrade} <br /> 
-            {tenthTime}
+export function Education({
+  education
+}) {
+  return (
+    education.length===0?null:
+    <div id="education">
+      <h2>EDUCATION</h2>
+      {education.map((edu) => {
+        return (
+        <p>
+            {edu.institute} <br />
+            {edu.grade} <br />
+            {edu.time} <br />
         </p>
-        <p> 
-            {twelfthSchool} <br /> 
-            {twelfthGrade} <br />  
-            {twelfthTime}
-        </p> 
+        );
+      })}
     </div>
-    );
+  );
 }

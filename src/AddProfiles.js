@@ -25,7 +25,7 @@ export default function AddProfiles({ setProfiles, profiles }) {
 
   function updateProfiles(e){
         let id = +(e.target.id.slice(5));
-        // console.log(id);
+        
         let newProfiles = []
 
         for(let i=0;i<profiles.length;i++)
@@ -33,13 +33,13 @@ export default function AddProfiles({ setProfiles, profiles }) {
             if(profiles[i].index!==id)
             {
                 newProfiles.push(profiles[i]);
-                console.log("pink");
+                // console.log("pink");
             }
             else
             {
-                console.log("yellow");
+                // console.log("yellow");
                 let temp = profiles[i];
-                console.log(e.target.name);
+                // console.log(e.target.name);
                 temp[e.target.name] = e.target.value;
                 newProfiles.push(temp);
             }
@@ -50,9 +50,11 @@ export default function AddProfiles({ setProfiles, profiles }) {
 
   return (
     <div>
+      <h1> Add Profiles </h1>
       <button onClick={addProfile}> add profile </button>
       <button onClick={removeProfile}> remove profile </button>
-      {profiles.map((x) => {
+      {
+      profiles.map((x) => {
         return (
           <React.Fragment key={x.index}>
             <br />
@@ -68,7 +70,8 @@ export default function AddProfiles({ setProfiles, profiles }) {
             <br />
           </React.Fragment>
         );
-      })}
+      })
+      }
     </div>
   );
 }

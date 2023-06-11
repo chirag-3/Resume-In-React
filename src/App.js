@@ -12,9 +12,8 @@ function App() {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
-  const [profiles,setProfiles] = useState([]);
-
-
+  const [profiles, setProfiles] = useState([]);
+  const [education, setEducation] = useState([]);
 
   return (
     <>
@@ -25,14 +24,10 @@ function App() {
         <Profile profiles={profiles} />
 
         <div id="components">
-          <LeftComponent id="leftComponent" />
+          <LeftComponent id="leftComponent" education={education}/>
           <RightComponent id="rightComponent" />
         </div>
-        
       </div>
-
-
-
 
       {/* To print the resume */}
       <ReactToPrint
@@ -44,13 +39,18 @@ function App() {
         content={() => componentRef.current}
       />
 
-
-
       {/*To enter data into the resume*/}
-      <Editor setName={setName} setCity={setCity} setState={setState} setProfiles={setProfiles} profiles={profiles}/>
+      <Editor
+        setName={setName}
+        setCity={setCity}
+        setState={setState}
+        setProfiles={setProfiles}
+        profiles={profiles}
+        education={education}
+        setEducation={setEducation}
+      />
     </>
   );
 }
 
 export default App;
-

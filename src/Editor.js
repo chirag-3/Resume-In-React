@@ -2,7 +2,7 @@ import PersonalInformation from "./PersonalIformation";
 import EducationDetails from "./EducationDetails";
 import AddProfiles from "./AddProfiles";
 
-export default function Editor({ setName, setCity, setState, setProfiles, profiles }) {
+export default function Editor({ setName, setCity, setState, setProfiles, profiles, education, setEducation }) {
   return (
     <div>
       <form>
@@ -14,7 +14,7 @@ export default function Editor({ setName, setCity, setState, setProfiles, profil
 
         <AddProfiles setProfiles={setProfiles} profiles={profiles}/>
 
-        <EducationDetails />
+        <EducationDetails education={education} setEducation={setEducation}/>
       </form>
     </div>
   );
