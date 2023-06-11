@@ -14,7 +14,8 @@ function App() {
   const [state, setState] = useState("");
   const [profiles, setProfiles] = useState([]);
   const [education, setEducation] = useState([]);
-
+  const [skills,setSkills] = useState([]);
+  
   return (
     <>
       {/* The Resume */}
@@ -24,7 +25,7 @@ function App() {
         <Profile profiles={profiles} />
 
         <div id="components">
-          <LeftComponent id="leftComponent" education={education}/>
+          <LeftComponent id="leftComponent" education={education} skills={skills}/>
           <RightComponent id="rightComponent" />
         </div>
       </div>
@@ -48,6 +49,8 @@ function App() {
         profiles={profiles}
         education={education}
         setEducation={setEducation}
+        skills={skills}
+        setSkills={setSkills}
       />
     </>
   );
