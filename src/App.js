@@ -15,6 +15,7 @@ function App() {
   const [profiles, setProfiles] = useState([]);
   const [education, setEducation] = useState([]);
   const [skills,setSkills] = useState([]);
+  const [projects,setProjects] = useState([]);
   
   return (
     <>
@@ -26,7 +27,7 @@ function App() {
 
         <div id="components">
           <LeftComponent id="leftComponent" education={education} skills={skills}/>
-          <RightComponent id="rightComponent" />
+          <RightComponent id="rightComponent" projects={projects}/>
         </div>
       </div>
 
@@ -51,6 +52,8 @@ function App() {
         setEducation={setEducation}
         skills={skills}
         setSkills={setSkills}
+        projects={projects}
+        setProjects={setProjects}
       />
     </>
   );

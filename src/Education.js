@@ -9,7 +9,7 @@ export function Education({
       <h2>EDUCATION</h2>
       {education.map((edu) => {
         return (
-        <p>
+        <p key={edu.index}>
             {edu.institute} <br />
             {edu.grade} <br />
             {edu.time} <br />

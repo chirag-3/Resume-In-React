@@ -11,15 +11,18 @@ export default function Projects({projects}){
             <ul>
                 { projects.map(project=>
                         <li>
-                            <h4>{project.name}</h4>
-                            {project.technologies.length===0?null:
+                            <h4>{project.title}</h4>
+                            {project.skills.length===0?null:
                             <ul className='tech-used'>
                                 {
-                                    project.technologies.map(tech=>
-                                            <div><li>{tech}</li></div>
+                                    project.skills.map(tech=>
+                                            <div><li>{tech.name}</li></div>
                                         )
                                 }
                             </ul>}
+                            <p>
+                                {project.description}
+                            </p>
                         </li>)
                 }
             </ul>

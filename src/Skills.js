@@ -5,7 +5,7 @@ export default function Skills({skills}){
         <h2>SKILLS</h2>
         {
         skills.map(
-            skill=> <li>{skill.skill}</li>
+            skill=> <li key={skill.index}>{skill.skill}</li>
         )
         }       
     </div>));
