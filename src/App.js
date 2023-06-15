@@ -21,7 +21,8 @@ function App() {
   const [achievements,setAchievements] = useState(data.certificates);
 
   return (
-    <>
+    // <>
+    <div id="page">
       {/* The Resume */}
       <div className="App" id="resume" ref={componentRef}>
         <Heading name={name} city={city} state={state} />
@@ -66,7 +67,8 @@ function App() {
         achievements={achievements}
         setAchievements={setAchievements}
       />
-    </>
+    </div>
+    // </>
   );
 }
 

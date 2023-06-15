@@ -1,0 +1,12 @@
+#certificate-entries #btn-1{
+    margin-right: 40px;
+}
+
+.certificate-entry .element label{
+    flex-basis: 7%;
+}
+
+.certificate-entry{
+    border: 1px black solid;
+    margin-bottom: 5px;
+}

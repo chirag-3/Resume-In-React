@@ -144,9 +144,12 @@ export default function EnterProjects({ projects, setProjects }) {
                 </div>
               );
             })}
+
+            <div id="description">
             <label htmlFor={"-p-d-" + project.index}>Description : </label>
             <textarea id={"-p-d-" + project.index} onChange={updateProjectDescription}></textarea>
-            <br />
+            </div> 
+
           </div>
         );
       })}

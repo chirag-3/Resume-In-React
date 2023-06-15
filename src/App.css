@@ -23,3 +23,21 @@
 *{
     font-family: Calibri, sans-serif;
 }
+
+input{
+    box-shadow: 0px 0px 1px white;
+}
+
+textarea{
+    box-shadow: 0px 0px 3px;
+}
+
+button{
+    background-color: white;
+    margin-left: 5px;
+    padding: 10px;
+}
+
+body{
+    background-color: rgb(238, 192, 127);
+}

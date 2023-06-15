@@ -1,4 +1,5 @@
 import React from "react";
+import './EnterCertificates.css'
 
 export default function EnterCertificates({certificates,setCertificates,isCertificate}){
 
@@ -37,21 +38,28 @@ export default function EnterCertificates({certificates,setCertificates,isCertif
 
 
     return(
-        <div>
+        <div id="certificate-entries">
             <h1>{isCertificate===true?"Certificates":"Achievements"}</h1>
-            <button onClick={addCertificate}>{isCertificate===true?"Add Certitficate":"Add Achievement"}</button>
-            <button onClick={removeCertificate}>{isCertificate===true?"Remove Certificate":"Remove Achievement"}</button>
+            <button onClick={addCertificate} id="btn-1">{isCertificate===true?"Add Certitficate":"Add Achievement" }</button>
+            <button onClick={removeCertificate} id="btn-2">{isCertificate===true?"Remove Certificate":"Remove Achievement"}</button>
             <br />
 
             {
                 certificates.map(certificate=>{
                     return(
-                        <React.Fragment key={certificate.index}>
+                        <div key={certificate.index} className="certificate-entry">
+                            
+                            <div className="element">
                             <label htmlFor={"-c-"+certificate.index}>Certificate : </label>
-                            <input id={"-c-"+certificate.index} onChange={updateCertificate}></input><br />
+                            <input id={"-c-"+certificate.index} onChange={updateCertificate}></input>
+                            </div>
+
+                            <div className="element">
                             <label htmlFor={"-c-l-"+certificate.index}>Link : </label>
-                            <input id={"-c-l-"+certificate.index} onChange={updateLink}></input><br />
-                        </React.Fragment>    
+                            <input id={"-c-l-"+certificate.index} onChange={updateLink}></input>
+                            </div>
+                        
+                        </div>    
                     )
                 })
             }

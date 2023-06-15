@@ -1,4 +1,4 @@
-#project-entries #btn1{
+#project-entries #btn-1{
     margin-right: 40px;
 }
 
@@ -13,4 +13,27 @@ button{
 
 .btn-3{
     margin-right: 40px;
+}
+
+.project-entry h4{
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+.project-entry label{
+    flex-basis: 3%;
+}
+
+#description {
+    display: flex;
+}
+
+#description label{
+    font-weight: bold;
+    flex-basis: 7%;
+}
+
+#description textarea{
+    flex-basis: 70%;
+    margin-bottom: 5px;
 }
