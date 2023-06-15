@@ -1,5 +1,5 @@
 import React from "react";
-
+import './EnterProjects.css'
 export default function EnterProjects({ projects, setProjects }) {
 
   function addProject(e) {
@@ -8,7 +8,7 @@ export default function EnterProjects({ projects, setProjects }) {
 
     setProjects([
       ...projects,
-      { title: "", description: "", skills: [], index:projects.length },
+      { title: "", description: "", skills: [], index:projects.length,link:"" },
     ]);
   }
 
@@ -64,6 +64,19 @@ export default function EnterProjects({ projects, setProjects }) {
 
  }
 
+ function updateProjectLink(e){
+  let idx = e.target.id.slice(5);
+
+  let temp = structuredClone(projects);
+  
+  temp[idx].link = e.target.value;
+
+  setProjects(temp);
+
+}
+
+
+
  function updateProjectDescription(e){
     let idx = e.target.id.slice(5);
 
@@ -92,11 +105,6 @@ export default function EnterProjects({ projects, setProjects }) {
 
     let temp = structuredClone(projects);
 
-    // console.log("*********************");
-    // console.log(projectIndex);
-    // console.log(skillIndex);
-    // console.log("*********************")
-
     temp[projectIndex].skills[skillIndex].name = e.target.value;
 
     setProjects(temp);
@@ -105,35 +113,41 @@ export default function EnterProjects({ projects, setProjects }) {
 
 
   return (
-    <div>
+    <div id="project-entries">
       <h2>Projects</h2>
-      <button onClick={addProject}>Add Project</button>
-      <button onClick={removeProject}>Remove Project</button>
+      <button onClick={addProject} id="btn-1">Add Project</button>
+      <button onClick={removeProject} id="btn-2">Remove Project</button>
       <br />
       {projects.map((project) => {
         return (
-          <React.Fragment key={project.index}>
-            <label>Title : </label>
+          <div key={project.index} className="project-entry">
+
+            <div className="element">
+            <label htmlFor={"-p-t-" + project.index}>Title : </label>
             <input id={"-p-t-" + project.index} onChange={updateProjectName}></input>
-            <br />
-            <h4>Skills</h4> <br />
-            <button onClick={addSkill} id={"-p-s-a-b-"+project.index}>Add Skill</button>
-            <button onClick={removeSkill} id={"-p-s-r-b-"+project.index}>Remove Skill</button>
+            </div>
+            
+            <div className="element">
+            <label htmlFor={"-p-l-" + project.index}>Link : </label>
+            <input id={"-p-l-" + project.index} onChange={updateProjectLink}></input>
+            </div>
+            
+            <h4>Skills</h4>
+            <button onClick={addSkill} id={"-p-s-a-b-"+project.index} className="btn-3">Add Skill</button>
+            <button onClick={removeSkill} id={"-p-s-r-b-"+project.index} className="btn-4">Remove Skill</button>
             <br />
             {project.skills.map((skill) => {
               return (
-                <React.Fragment key={project.index+"-"+skill.index}>
+                <div key={project.index+"-"+skill.index} className="element">
                   <label htmlFor={"-p-s-" + project.index+"-"+skill.index}>Skill : </label>
                   <input id={"-p-s-" + project.index+"-"+skill.index} onChange={updateProjectSkill}></input>
-                  <br />
-                </React.Fragment>
+                </div>
               );
             })}
             <label htmlFor={"-p-d-" + project.index}>Description : </label>
             <textarea id={"-p-d-" + project.index} onChange={updateProjectDescription}></textarea>
             <br />
-            <hr />
-          </React.Fragment>
+          </div>
         );
       })}
     </div>

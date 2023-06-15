@@ -1,0 +1,16 @@
+#skills-entry #btn-1{
+    margin-right: 40px;
+}
+
+button{
+    margin-bottom: 5px;
+}
+
+#skills-entry .element > label{
+    flex-basis: 3%;
+    font-weight: bold;
+}
+
+#skills-entry .element > input{
+    flex-basis: 70%;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './AddProfiles.css';
 export default function AddProfiles({ setProfiles, profiles }) {
 //   const [profiles, setProfiles] = useState([0]);
 
@@ -49,29 +49,31 @@ export default function AddProfiles({ setProfiles, profiles }) {
   }
 
   return (
-    <div>
+    <div id="enterProfiles">
       <h1> Add Profiles </h1>
-      <button onClick={addProfile}> add profile </button>
-      <button onClick={removeProfile}> remove profile </button>
+      <button onClick={addProfile} id="btn-1"> add profile </button>
+      <button onClick={removeProfile} id="btn-2"> remove profile </button>
+      <div id="current-profiles">
       {
       profiles.map((x) => {
         return (
-          <React.Fragment key={x.index}>
-            <br />
+          <div key={x.index} className='profile-entry'>
+
+            <div className="element">
             <label htmlFor={"pro-l" + x.index}>link : </label>
             <input id={"pro-l" + x.index} onChange={updateProfiles} name="link"></input>
-            <br />
+            </div>
+
+            <div className="element">
             <label htmlFor={"pro-n" + x.index}>name : </label>
-            <input
-              id={"pro-n" + x.index}
-              onChange={updateProfiles}
-              name = "name"
-            ></input>
-            <br />
-          </React.Fragment>
+            <input id={"pro-n" + x.index} onChange={updateProfiles} name = "name"></input>
+            </div>
+
+          </div>
         );
       })
       }
+      </div>
     </div>
   );
 }

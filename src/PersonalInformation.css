@@ -1,0 +1,18 @@
+.element{
+    width:auto;
+    margin-left:auto;
+    margin-right:auto;
+    /* border: 1px red solid; */
+    display: flex;
+    margin:5px 0;
+}
+
+.element > label{
+    flex-basis: 5%;
+    font-weight: bold;
+}
+
+.element > input{
+    flex-basis: 70%;
+}
+

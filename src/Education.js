@@ -7,15 +7,17 @@ export function Education({
     education.length===0?null:
     <div id="education">
       <h2>EDUCATION</h2>
+      <ul>
       {education.map((edu) => {
         return (
-        <p key={edu.index}>
-            {edu.institute} <br />
+        <li key={edu.index}>
+            <b>{edu.institute}</b> <br />
             {edu.grade} <br />
             {edu.time} <br />
-        </p>
+        </li>
         );
       })}
+      </ul>
     </div>
   );
 }

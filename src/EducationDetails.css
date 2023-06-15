@@ -1,4 +1,4 @@
-#enterProfiles #btn-1{
+#educationDetails #btn-1{
     margin-right: 40px;
 }
 
@@ -6,8 +6,8 @@ button{
     margin-bottom: 5px;
 }
 
-.element > label{
-    flex-basis: 5%;
+#educationDetails .element > label{
+    flex-basis: 15%;
     font-weight: bold;
 }
 
@@ -15,7 +15,7 @@ button{
     flex-basis: 70%;
 }
 
-.profile-entry{
+.education-entry{
     border: 1px black solid;
     margin-bottom: 7px;
     padding-left: 10px;

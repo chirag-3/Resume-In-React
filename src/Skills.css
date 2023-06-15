@@ -1,7 +1,15 @@
 #skills{
-    margin-left: 5%;
+    margin-left: 5px;
 }
 
-li{
-    font-weight: bold;
+
+#skills h2{
+    margin-bottom: 4px;
+    margin-top: 4px;
+    font-size: 21.34px;
+}
+
+#skills ul{
+    margin-top: 5px;
+    padding-left: 21px;
 }

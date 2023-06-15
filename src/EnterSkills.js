@@ -1,4 +1,6 @@
 import React from 'react';
+import './EnterSkills.css';
+
 
 export default function EnterSkills({skills,setSkills}){
 
@@ -37,18 +39,19 @@ export default function EnterSkills({skills,setSkills}){
 
 
     return(
-        <div>
+        <div id="skills-entry">
             <h2>Skills</h2>
-            <button onClick={addSkill}>Add Skill</button>
-            <button onClick={removeSkill}>Remove Skill</button>
+            <button onClick={addSkill} id="btn-1">Add Skill</button>
+            <button onClick={removeSkill} id="bth-2">Remove Skill</button>
             <br />
             {
                 skills.map(skill => {
                     return(
                         <React.Fragment key={skill.index}>
+                           <div className="element">
                            <label htmlFor={"-s-"+skill.index}> Skill: </label>
                            <input id={"-s-"+skill.index} onChange={updateSkill}></input>
-                           <br />
+                           </div>
                         </React.Fragment>
                     )
                 })

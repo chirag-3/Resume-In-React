@@ -2,6 +2,20 @@
    margin-left: 5%;
 }
 
-h2{
-    margin-bottom: 8px;
+#education h2{
+    margin-bottom: 4px;
+    margin-top: 4px;
+    font-size: 21.34px;
 }
+
+#education ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 17px;
+    padding-left: 4px;
+}
+
+#education {
+    margin-left: 5px;
+}
+

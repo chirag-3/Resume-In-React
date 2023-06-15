@@ -1,9 +1,7 @@
-h2{
-    margin-bottom: 8px;
-}
-
-#projects{
-    margin-left: 5%;
+#projects h2{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 21.34px;
 }
 
 .tech-used{
@@ -13,4 +11,19 @@ h2{
 
 .tech-used > div{
     margin-right: 30px;
+}
+
+#projects > ul > li > h4{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#projects > ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#projects > ul > li > p {
+    margin-top: 4px;
+    margin-bottom: 4px;
 }

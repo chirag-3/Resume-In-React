@@ -1,4 +1,5 @@
 import React from "react";
+import './EducationDetails.css';
 
 export default function EducationDetails({ education, setEducation }) {
   function addEducation(e) {
@@ -49,21 +50,28 @@ export default function EducationDetails({ education, setEducation }) {
 
 
   return (
-    <div>
+    <div id="educationDetails">
       <h1>Education</h1>
-      <button onClick={addEducation}>add Education</button>
-      <button onClick={removeEducation}>remove Education</button>
+      <button onClick={addEducation} id="btn-1">add Education</button>
+      <button onClick={removeEducation} id="btn-2">remove Education</button>
       {education.map((x) => {
         return (
-          <React.Fragment key={x.index}>
-            <br />
+          <div key={x.index} className="education-entry">
+            <div className="element">
             <label htmlFor={"n"+x.index}> Institite and Degree : </label>
-            <input type="text" id={"n"+x.index} name="institute" onChange={updateEducation}/> <br />
+            <input type="text" id={"n"+x.index} name="institute" onChange={updateEducation}/>
+            </div>
+
+            <div className="element"> 
             <label htmlFor={"c"+x.index}> Grade : </label>
-            <input type="text" id={"c"+x.index} name="grade" onChange={updateEducation}/> <br />
+            <input type="text" id={"c"+x.index} name="grade" onChange={updateEducation}/>
+            </div>
+
+            <div className="element">
             <label htmlFor={"s"+x.index}> Time : </label>
-            <input type="text" id={"s"+x.index} name="time" onChange={updateEducation}/> <br />
-          </React.Fragment>
+            <input type="text" id={"s"+x.index} name="time" onChange={updateEducation}/>
+            </div>
+          </div>
         );
       })}
     </div>

@@ -3,6 +3,9 @@ import EducationDetails from "./EducationDetails";
 import AddProfiles from "./AddProfiles";
 import EnterSkills from "./EnterSkills";
 import EnterProjects from "./EnterProjects";
+import EnterCertificates from "./EnterCertificates";
+import './Editor.css';
+
 export default function Editor({
   setName,
   setCity,
@@ -14,10 +17,14 @@ export default function Editor({
   skills,
   setSkills,
   projects,
-  setProjects
+  setProjects,
+  certificates,
+  setCertificates,
+  achievements,
+  setAchievements
 }) {
   return (
-    <div>
+    <div id="editor">
       <form>
         <PersonalInformation
           setName={setName}
@@ -32,6 +39,10 @@ export default function Editor({
         <EnterSkills skills={skills} setSkills={setSkills} />
 
         <EnterProjects projects={projects} setProjects={setProjects} />
+
+        <EnterCertificates certificates={certificates} setCertificates={setCertificates} isCertificate={true}/>
+
+        <EnterCertificates certificates={achievements} setCertificates={setAchievements} isCertificate={false}/>
       </form>
     </div>
   );

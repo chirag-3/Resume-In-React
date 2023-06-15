@@ -6,17 +6,18 @@ export default function Projects({projects}){
         (
         projects.length===0?null:
         <div id="projects">
-            <h2>Projects</h2>
+            <h2>PROJECTS</h2>
         
             <ul>
                 { projects.map(project=>
-                        <li>
-                            <h4>{project.title}</h4>
+                        <li key={project.index}>
+                            <h4>{project.title}{project.link===""?null:<a href={project.link}> link</a>}</h4>
+                            
                             {project.skills.length===0?null:
                             <ul className='tech-used'>
                                 {
                                     project.skills.map(tech=>
-                                            <div><li>{tech.name}</li></div>
+                                            <div key={project.skills.index}><li>{tech.name}</li></div>
                                         )
                                 }
                             </ul>}

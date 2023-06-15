@@ -7,33 +7,90 @@ const data = {
     {
       name: "LinkedIn",
       link: "https://www.linkedin.com/in/chirag-lala-830463190/",
+      index: 0,
     },
-    { name: "Github", link: "https://github.com/chirag-3" },
-    { name: "Leetcode", link: "https://leetcode.com/chiragvs/" },
+    { name: "Github", link: "https://github.com/chirag-3", index: 1 },
+    { name: "Leetcode", link: "https://leetcode.com/chiragvs/", index: 2 },
     {
       name: "InterviewBit",
       link: "https://www.interviewbit.com/profile/chirag-lala/daily-activity",
+      index: 3,
     },
   ],
 
-  education: {
-    tenthGrade: 91.2,
-    twelfthGrade: 92.6,
-    collegeGrade: 8.48,
-    tenthSchool: "10th Atomic Enegry Central School RRCAT Indore",
-    twelfthSchool: "12th Atomic Enegry Central School RRCAT Indore",
-    college: "Chandigarh University BE IBM CSE Big Data Analytics",
-    tenthTime: "2015-2016",
-    twelfthTime: "2016-2017",
-    collegeTime: "2020-2024",
-  },
+  education: [
+    {index:0, institute:"BE CSE Big Data Analytics - Chandigarh University",grade:8.48,time:"2020-2024"},
+    {index:1, institute:"12th - Atomic Energy Central School Indore",grade:92.6,time:"2018"},
+    {index:2, institute:"10th - Atomic Energy Central School Indore",grade:91.2,time:"2016"},
+    
+],
 
-  skills: ["Python","JavaScript","SQL","HTML","CSS","Excel","C++","Problem Solving","Tableau"],
+  skills: [
+    {index:0,skill:"Python"},
+    {index:1,skill:"JavaScript"},
+    {index:2,skill:"SQL"},
+    {index:3,skill:"HTML"},
+    {index:4,skill:"CSS"},
+    {index:5,skill:"Excel"},
+    {index:6,skill:"C++"},
+    {index:7,skill:"Problem Solving"},
+    {index:8,skill:"Tableau"}
+  ],
 
   projects: [
-    {name:"Secure Lab Access Desktop Application", technologies:['Python',"Tkinter","SQLite","VSCode"]},
-    {name:"Instagram Data Scraping Using Selenium", technologies:['Python',"Selenium","Jupyter notebook"]},
-    {name:"Fruit Slicing game", technologies:['HTML',"CSS","JavaScript"]}
+    {
+      title: "Secure Lab Access Desktop Application",
+      skills: [{name:"Python",index:0}, {name:"Tkinter",index:1}, {name:"SQLite",index:2}, {name:"VSCode",index:3}],
+      description:`This is a desktop application for two step authentication process. It is completely made in Python.
+                    The GUI has been made using Tkinter. The dataabse used in SQLite.It had two step authetication as
+                    facial recognition and qr code scanning. opencv was used for facial recognition. The function used
+                    was hog, (heigh of gradient) for pur[ose of facial recognition`,
+      index:0,
+      link:"ogvbbtigtjgbtgbigkjn"
+    },
+    {
+      title: "Secure Lab Access Desktop Application",
+      skills: [{name:"Python",index:0}, {name:"Tkinter",index:1}, {name:"SQLite",index:2}, {name:"VSCode",index:3}],
+      description:`This is a desktop application for two step authentication process. It is completely made in Python.
+                    The GUI has been made using Tkinter. The dataabse used in SQLite.It had two step authetication as
+                    facial recognition and qr code scanning. opencv was used for facial recognition. The function used
+                    was hog, (heigh of gradient) for pur[ose of facial recognition`,
+      index:1,
+      link:"ogvbbtigtjgbtgbigkjn"
+    },
+    {
+      title: "Secure Lab Access Desktop Application",
+      skills: [{name:"Python",index:0}, {name:"Tkinter",index:1}, {name:"SQLite",index:2}, {name:"VSCode",index:3}],
+      description:`This is a desktop application for two step authentication process. It is completely made in Python.
+                    The GUI has been made using Tkinter. The dataabse used in SQLite.It had two step authetication as
+                    facial recognition and qr code scanning. opencv was used for facial recognition. The function used
+                    was hog, (heigh of gradient) for pur[ose of facial recognition`,
+      index:2,
+      link:"ogvbbtigtjgbtgbigkjn"
+    }
+  ],
+
+  certificates:[
+    {
+      name:"Coursera Meta React JS Certified",
+      link:"rgftrgtrgtrgrtg",
+      index:0
+    },
+    {
+      name:"Coursera Meta React JS Certified",
+      link:"rgftrgtrgtrgrtg",
+      index:0
+    },
+    {
+      name:"Coursera Meta React JS Certified",
+      link:"rgftrgtrgtrgrtg",
+      index:1
+    },
+    {
+      name:"Coursera Meta React JS Certified",
+      link:"rgftrgtrgtrgrtg",
+      index:2
+    }
   ]
 };
 
